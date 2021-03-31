@@ -8,7 +8,8 @@
     "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "docker-build": "docker build -t interviews-api:1.0 .",
-    "docker-run":"docker run --name interviews-api -d --env-file .env-docker -p 5000:5000 interviews-api:1.0"
+    "docker-run":"docker run --name interviews-api -d --env-file .env-docker -p 5000:5000 interviews-api:1.0",
+    "docker-push": "docker tag interviews-api:1.0 816674678256.dkr.ecr.us-east-2.amazonaws.com/interviews-api:1.0 & docker push 816674678256.dkr.ecr.us-east-2.amazonaws.com/interviews-api:1.0"
   },
   "repository": {
     "type": "git",
